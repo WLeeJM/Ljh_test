@@ -1,25 +1,32 @@
 import logo from './logo.svg';
+import character from './cat_pink.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={character} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          나는 바보다        
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h6>이거 너무 어려워...ㅠㅠ 공부 싫음</h6>
       </header>
+      <></>
+    </div>
+
+  );
+}
+function Video({ video }) {
+  return (
+    <div>
+      <Thumbnail video={video} />
+      <a href={video.url}>
+        <h3>{video.title}</h3>
+        <p>{video.description}</p>
+      </a>
+      <LikeButton video={video} />
     </div>
   );
 }
-
 export default App;
